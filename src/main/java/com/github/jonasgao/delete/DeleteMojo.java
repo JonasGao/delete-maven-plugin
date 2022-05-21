@@ -82,7 +82,7 @@ public class DeleteMojo
             return false;
         });
         XMLOutputter outputter = new XMLOutputter();
-        outputter.setFormat(Format.getCompactFormat());
+        outputter.setFormat(Format.getPrettyFormat());
         try (FileWriter writer = new FileWriter(pomFile)) {
             outputter.output(document, writer);
         } catch (IOException e) {
